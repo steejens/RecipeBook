@@ -1,0 +1,15 @@
+C:\Users\azar.imanguliyev\Development\RecipeBook\RecipeBook.Domain\bin\Debug\net6.0\RecipeBook.Domain.deps.json
+C:\Users\azar.imanguliyev\Development\RecipeBook\RecipeBook.Domain\bin\Debug\net6.0\RecipeBook.Domain.dll
+C:\Users\azar.imanguliyev\Development\RecipeBook\RecipeBook.Domain\bin\Debug\net6.0\RecipeBook.Domain.pdb
+C:\Users\azar.imanguliyev\Development\RecipeBook\RecipeBook.Domain\bin\Debug\net6.0\RecipeBook.Core.dll
+C:\Users\azar.imanguliyev\Development\RecipeBook\RecipeBook.Domain\bin\Debug\net6.0\RecipeBook.Core.pdb
+C:\Users\azar.imanguliyev\Development\RecipeBook\RecipeBook.Domain\obj\Debug\net6.0\RecipeBook.Domain.csproj.AssemblyReference.cache
+C:\Users\azar.imanguliyev\Development\RecipeBook\RecipeBook.Domain\obj\Debug\net6.0\RecipeBook.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\azar.imanguliyev\Development\RecipeBook\RecipeBook.Domain\obj\Debug\net6.0\RecipeBook.Domain.AssemblyInfoInputs.cache
+C:\Users\azar.imanguliyev\Development\RecipeBook\RecipeBook.Domain\obj\Debug\net6.0\RecipeBook.Domain.AssemblyInfo.cs
+C:\Users\azar.imanguliyev\Development\RecipeBook\RecipeBook.Domain\obj\Debug\net6.0\RecipeBook.Domain.csproj.CoreCompileInputs.cache
+C:\Users\azar.imanguliyev\Development\RecipeBook\RecipeBook.Domain\obj\Debug\net6.0\RecipeBook.Domain.csproj.CopyComplete
+C:\Users\azar.imanguliyev\Development\RecipeBook\RecipeBook.Domain\obj\Debug\net6.0\RecipeBook.Domain.dll
+C:\Users\azar.imanguliyev\Development\RecipeBook\RecipeBook.Domain\obj\Debug\net6.0\refint\RecipeBook.Domain.dll
+C:\Users\azar.imanguliyev\Development\RecipeBook\RecipeBook.Domain\obj\Debug\net6.0\RecipeBook.Domain.pdb
+C:\Users\azar.imanguliyev\Development\RecipeBook\RecipeBook.Domain\obj\Debug\net6.0\ref\RecipeBook.Domain.dll
