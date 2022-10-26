@@ -22,6 +22,28 @@ namespace RecipeBook.Data.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
+            modelBuilder.Entity("RecipeBook.Domain.Entities.AboutUs.AboutUs", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<int>("HtmlContent")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("IsActive")
+                        .HasColumnType("integer");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("AboutUs");
+                });
+
             modelBuilder.Entity("RecipeBook.Domain.Entities.CookingInstruction", b =>
                 {
                     b.Property<int>("InstId")
@@ -53,7 +75,7 @@ namespace RecipeBook.Data.Migrations
                     b.ToTable("CookingInstructions");
                 });
 
-            modelBuilder.Entity("RecipeBook.Domain.Entities.DifficultyLevel", b =>
+            modelBuilder.Entity("RecipeBook.Domain.Entities.Food.DifficultyLevel", b =>
                 {
                     b.Property<int>("LevelId")
                         .ValueGeneratedOnAdd()
@@ -75,7 +97,7 @@ namespace RecipeBook.Data.Migrations
                     b.ToTable("DifficultyLevels");
                 });
 
-            modelBuilder.Entity("RecipeBook.Domain.Entities.Food", b =>
+            modelBuilder.Entity("RecipeBook.Domain.Entities.Food.Food", b =>
                 {
                     b.Property<int>("FoodId")
                         .ValueGeneratedOnAdd()
@@ -130,7 +152,7 @@ namespace RecipeBook.Data.Migrations
                     b.ToTable("Food");
                 });
 
-            modelBuilder.Entity("RecipeBook.Domain.Entities.FoodCategory", b =>
+            modelBuilder.Entity("RecipeBook.Domain.Entities.Food.FoodCategory", b =>
                 {
                     b.Property<int>("CatId")
                         .ValueGeneratedOnAdd()
@@ -152,7 +174,7 @@ namespace RecipeBook.Data.Migrations
                     b.ToTable("FoodCategories");
                 });
 
-            modelBuilder.Entity("RecipeBook.Domain.Entities.FoodIngredient", b =>
+            modelBuilder.Entity("RecipeBook.Domain.Entities.Food.FoodIngredient", b =>
                 {
                     b.Property<int>("FoodIngId")
                         .ValueGeneratedOnAdd()
@@ -195,7 +217,7 @@ namespace RecipeBook.Data.Migrations
                     b.ToTable("FoodIngredients");
                 });
 
-            modelBuilder.Entity("RecipeBook.Domain.Entities.FoodType", b =>
+            modelBuilder.Entity("RecipeBook.Domain.Entities.Food.FoodType", b =>
                 {
                     b.Property<int>("TypeId")
                         .ValueGeneratedOnAdd()
@@ -218,7 +240,7 @@ namespace RecipeBook.Data.Migrations
                     b.ToTable("FoodTypes");
                 });
 
-            modelBuilder.Entity("RecipeBook.Domain.Entities.Ingredient", b =>
+            modelBuilder.Entity("RecipeBook.Domain.Entities.Ingredients.Ingredient", b =>
                 {
                     b.Property<int>("IngredientId")
                         .ValueGeneratedOnAdd()
@@ -244,7 +266,7 @@ namespace RecipeBook.Data.Migrations
                     b.ToTable("Ingredients");
                 });
 
-            modelBuilder.Entity("RecipeBook.Domain.Entities.IngredientMeasurement", b =>
+            modelBuilder.Entity("RecipeBook.Domain.Entities.Ingredients.IngredientMeasurement", b =>
                 {
                     b.Property<int>("IngMeaId")
                         .ValueGeneratedOnAdd()
@@ -276,7 +298,7 @@ namespace RecipeBook.Data.Migrations
                     b.ToTable("IngredientMeasurements");
                 });
 
-            modelBuilder.Entity("RecipeBook.Domain.Entities.IngredientUnit", b =>
+            modelBuilder.Entity("RecipeBook.Domain.Entities.Ingredients.IngredientUnit", b =>
                 {
                     b.Property<int>("UnitId")
                         .ValueGeneratedOnAdd()
@@ -301,7 +323,7 @@ namespace RecipeBook.Data.Migrations
 
             modelBuilder.Entity("RecipeBook.Domain.Entities.CookingInstruction", b =>
                 {
-                    b.HasOne("RecipeBook.Domain.Entities.Food", "Food")
+                    b.HasOne("RecipeBook.Domain.Entities.Food.Food", "Food")
                         .WithMany()
                         .HasForeignKey("FoodRefId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -310,21 +332,21 @@ namespace RecipeBook.Data.Migrations
                     b.Navigation("Food");
                 });
 
-            modelBuilder.Entity("RecipeBook.Domain.Entities.Food", b =>
+            modelBuilder.Entity("RecipeBook.Domain.Entities.Food.Food", b =>
                 {
-                    b.HasOne("RecipeBook.Domain.Entities.FoodCategory", "FoodCategory")
+                    b.HasOne("RecipeBook.Domain.Entities.Food.FoodCategory", "FoodCategory")
                         .WithMany()
                         .HasForeignKey("CategoryRefId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("RecipeBook.Domain.Entities.DifficultyLevel", "DifficultyLevel")
+                    b.HasOne("RecipeBook.Domain.Entities.Food.DifficultyLevel", "DifficultyLevel")
                         .WithMany()
                         .HasForeignKey("DifficultyRefId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("RecipeBook.Domain.Entities.FoodType", "FoodType")
+                    b.HasOne("RecipeBook.Domain.Entities.Food.FoodType", "FoodType")
                         .WithMany()
                         .HasForeignKey("TypeRefId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -337,21 +359,21 @@ namespace RecipeBook.Data.Migrations
                     b.Navigation("FoodType");
                 });
 
-            modelBuilder.Entity("RecipeBook.Domain.Entities.FoodIngredient", b =>
+            modelBuilder.Entity("RecipeBook.Domain.Entities.Food.FoodIngredient", b =>
                 {
-                    b.HasOne("RecipeBook.Domain.Entities.Food", "Food")
+                    b.HasOne("RecipeBook.Domain.Entities.Food.Food", "Food")
                         .WithMany()
                         .HasForeignKey("FoodRefId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("RecipeBook.Domain.Entities.Ingredient", "Ingredient")
+                    b.HasOne("RecipeBook.Domain.Entities.Ingredients.Ingredient", "Ingredient")
                         .WithMany()
                         .HasForeignKey("IngredientRefId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("RecipeBook.Domain.Entities.IngredientUnit", "IngredientUnit")
+                    b.HasOne("RecipeBook.Domain.Entities.Ingredients.IngredientUnit", "IngredientUnit")
                         .WithMany()
                         .HasForeignKey("UnitRefId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -364,15 +386,15 @@ namespace RecipeBook.Data.Migrations
                     b.Navigation("IngredientUnit");
                 });
 
-            modelBuilder.Entity("RecipeBook.Domain.Entities.IngredientMeasurement", b =>
+            modelBuilder.Entity("RecipeBook.Domain.Entities.Ingredients.IngredientMeasurement", b =>
                 {
-                    b.HasOne("RecipeBook.Domain.Entities.Ingredient", "Ingredient")
+                    b.HasOne("RecipeBook.Domain.Entities.Ingredients.Ingredient", "Ingredient")
                         .WithMany()
                         .HasForeignKey("IngredientRefId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("RecipeBook.Domain.Entities.IngredientUnit", "IngredientUnit")
+                    b.HasOne("RecipeBook.Domain.Entities.Ingredients.IngredientUnit", "IngredientUnit")
                         .WithMany()
                         .HasForeignKey("UnitRefId")
                         .OnDelete(DeleteBehavior.Cascade)

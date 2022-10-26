@@ -5,6 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using RecipeBook.Domain.Entities;
+using RecipeBook.Domain.Entities.AboutUs;
+using RecipeBook.Domain.Entities.Food;
+using RecipeBook.Domain.Entities.Ingredients;
 
 namespace RecipeBook.Data
 {
@@ -30,6 +33,7 @@ namespace RecipeBook.Data
         public DbSet<IngredientMeasurement> IngredientMeasurements { get; set; }
 
         public DbSet<IngredientUnit> IngredientUnits { get; set; }
+        public DbSet<AboutUs> AboutUs { get; set; }
 
 
     }

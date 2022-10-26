@@ -11,7 +11,7 @@ namespace RecipeBook.Domain.Entities
 
         [ForeignKey("Food")]
         public int FoodRefId { get; set; }
-        public Food Food { get; set; }
+        public Food.Food Food { get; set; }
 
         public  string InstructionStepText { get; set; }
         public int? StepOrder { get; set; }

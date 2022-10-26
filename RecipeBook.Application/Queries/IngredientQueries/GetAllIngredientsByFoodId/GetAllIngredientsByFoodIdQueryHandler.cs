@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Http;
 using RecipeBook.DataAccess.Repository.FoodIngredientRepository;
 using RecipeBook.DataAccess.Repository.FoodRepository;
 using RecipeBook.Domain.Entities;
+using RecipeBook.Domain.Entities.Food;
 using RecipeBook.Infrastructure.Configurations.Queries;
 
 namespace RecipeBook.Application.Queries.IngredientQueries.GetAllIngredientsByFoodId

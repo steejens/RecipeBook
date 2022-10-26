@@ -1,8 +1,9 @@
-﻿
-using RecipeBook.Domain.Configurations.Entity;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-namespace RecipeBook.Domain.Entities
+using RecipeBook.Domain.Configurations.Entity;
+using RecipeBook.Domain.Entities.Ingredients;
+
+namespace RecipeBook.Domain.Entities.Food
 {
     public class FoodIngredient : Entity
     {

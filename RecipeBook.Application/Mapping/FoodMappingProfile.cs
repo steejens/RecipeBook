@@ -3,6 +3,7 @@ using RecipeBook.Application.Queries.FoodQueries;
 using RecipeBook.Application.Queries.FoodQueries.GetFoodCategories;
 using RecipeBook.Application.Queries.FoodQueries.GetFoodTypes;
 using RecipeBook.Domain.Entities;
+using RecipeBook.Domain.Entities.Food;
 
 namespace RecipeBook.Application.Mapping
 {

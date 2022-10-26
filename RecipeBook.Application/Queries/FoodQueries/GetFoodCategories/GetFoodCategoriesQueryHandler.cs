@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Http;
 using RecipeBook.DataAccess.Repository.FoodCategoryRepository;
 using RecipeBook.Domain.Entities;
+using RecipeBook.Domain.Entities.Food;
 using RecipeBook.Infrastructure.Configurations.Queries;
 
 namespace RecipeBook.Application.Queries.FoodQueries.GetFoodCategories

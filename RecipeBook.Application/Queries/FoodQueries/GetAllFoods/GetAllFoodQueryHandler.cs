@@ -6,6 +6,7 @@ using Microsoft.EntityFrameworkCore.Internal;
 using RecipeBook.Core.Utilities;
 using RecipeBook.DataAccess.Repository.FoodRepository;
 using RecipeBook.Domain.Entities;
+using RecipeBook.Domain.Entities.Food;
 using RecipeBook.Infrastructure.Configurations.Queries;
 
 namespace RecipeBook.Application.Queries.FoodQueries.GetAllFoods

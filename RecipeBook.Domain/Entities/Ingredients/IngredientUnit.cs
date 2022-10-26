@@ -1,13 +1,7 @@
-﻿
+﻿using System.ComponentModel.DataAnnotations;
 using RecipeBook.Domain.Configurations.Entity;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace RecipeBook.Domain.Entities
+namespace RecipeBook.Domain.Entities.Ingredients
 {
     public class IngredientUnit : Entity
     {

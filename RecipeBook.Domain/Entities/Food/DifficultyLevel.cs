@@ -1,8 +1,7 @@
-﻿
+﻿using System.ComponentModel.DataAnnotations;
 using RecipeBook.Domain.Configurations.Entity;
-using System.ComponentModel.DataAnnotations;
 
-namespace RecipeBook.Domain.Entities
+namespace RecipeBook.Domain.Entities.Food
 {
     public class DifficultyLevel : Entity
     {

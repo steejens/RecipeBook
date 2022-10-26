@@ -3,6 +3,8 @@ using RecipeBook.Application.Queries.FoodQueries;
 using RecipeBook.Application.Queries.IngredientQueries;
 using RecipeBook.Application.Queries.IngredientQueries.IngredientMeasurementsQueries;
 using RecipeBook.Domain.Entities;
+using RecipeBook.Domain.Entities.Food;
+using RecipeBook.Domain.Entities.Ingredients;
 
 namespace RecipeBook.Application.Mapping
 {

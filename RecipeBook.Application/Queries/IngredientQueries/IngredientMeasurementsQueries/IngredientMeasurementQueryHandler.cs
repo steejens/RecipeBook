@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Http;
 using RecipeBook.DataAccess.Repository.IngredientMeasurementRepository;
 using RecipeBook.Domain.Entities;
+using RecipeBook.Domain.Entities.Ingredients;
 using RecipeBook.Infrastructure.Configurations.Queries;
 
 namespace RecipeBook.Application.Queries.IngredientQueries.IngredientMeasurementsQueries
